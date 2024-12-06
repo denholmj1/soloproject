@@ -1,0 +1,11 @@
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+# Initialize the analyzer
+analyzer = SentimentIntensityAnalyzer()
+
+# Function to calculate sentiment score
+def calculate_sentiment(text):
+    return analyzer.polarity_scores(text)['compound']
+
+# Apply to dataset
+tweets['sentiment_score'] = tweets['text'].apply(calculate_sentiment)
