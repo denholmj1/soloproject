@@ -1,11 +1,20 @@
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import pandas as pd
+import matplotlib.pyplot as plt
 
-# Initialize the analyzer
-analyzer = SentimentIntensityAnalyzer()
+# Data for political polarization (simulated for the report)
+years = [2000, 2004, 2008, 2012, 2016, 2020]
+polarization_index = [0.40, 0.42, 0.46, 0.48, 0.56, 0.58]
 
-# Function to calculate sentiment score
-def calculate_sentiment(text):
-    return analyzer.polarity_scores(text)['compound']
+# Create the plot
+plt.figure(figsize=(10, 6))
+plt.plot(years, polarization_index, marker='o', label='Polarization Index', color='blue')
+plt.axhline(y=0.5, color='red', linestyle='--', label='Moderate Polarization Level')
+plt.title("Political Polarization Index Over Time (2000-2020)", fontsize=14)
+plt.xlabel("Year", fontsize=12)
+plt.ylabel("Polarization Index (0-1)", fontsize=12)
+plt.grid(alpha=0.3)
+plt.legend()
+plt.tight_layout()
 
-# Apply to dataset
-tweets['sentiment_score'] = tweets['text'].apply(calculate_sentiment)
+# Show the plot
+plt.show()
