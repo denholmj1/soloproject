@@ -1,0 +1,12 @@
+# Dataset Documentation
+
+## Processed Data
+- `polarization_summary.csv`: A summary dataset derived from ANES, Pew Research, and U.S. Election Results.
+
+## Raw Data Sources
+1. **American National Election Studies (ANES)**
+   - [ANES Data Center](https://electionstudies.org/data-center/)
+2. **Pew Research Center**
+   - [2014 Political Polarization Survey](https://www.pewresearch.org/dataset/2014-political-polarization-survey/)
+3. **U.S. Election Results**
+   - [Federal Election Commission](https://www.fec.gov/data/elections/)
